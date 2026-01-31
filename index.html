@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackSmiths | Smart Estimation Platform</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <meta property="og:title" content="BlackSmiths | منصة تقدير أضرار المركبات">
+    <meta property="og:description" content="منصة ذكية لتقدير أضرار المركبات تعزز الدقة والشفافية.">
+    <meta property="og:image" content="https://blacksmiths.site/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="stop-scrolling">
+
+    <div id="intro-overlay">
+        <video autoplay muted loop id="intro-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="intro-content">
+            <img src="favicon.png" alt="BlackSmiths" class="intro-logo">
+        </div>
+        <div class="skip-intro-wrapper" id="skip-wrapper" onclick="dismissIntro()">
+            <div class="skip-curve">
+                <span>SKIP INTRO <i class="fas fa-chevron-down"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="favicon.png" alt="BlackSmiths Logo" class="nav-logo-img">
+                <h2 class="logo-text">BLACKSMITHS</h2>
+            </div>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="lang-btn" onclick="toggleLanguage()">English</button>
+                <a href="#contact" class="btn-nav" data-lang="contact_btn">تواصل معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg">
+            <video autoplay muted loop id="bg-video">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="zoom-out-up" data-aos-duration="1500" data-aos-delay="500">
+                <span class="hero-label" data-lang="hero_label">منصة ذكية متكاملة</span>
+                <h1 data-lang="hero_title">التقدير كما يجب <br><span class="text-orange">أن يكون</span></h1>
+                <p data-lang="hero_desc">نقدم حلولاً رقمية ذكية لتقدير أضرار المركبات بدقة وموثوقية عالية.</p>
+                <div class="hero-btns" data-aos="fade-up" data-aos-delay="800">
+                    <a href="#about" class="btn-primary" data-lang="discover_btn">اكتشف المزيد</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h3 class="section-subtitle text-orange" data-lang="about_subtitle">عن المنصة</h3>
+                <h2 class="section-title" data-lang="about_title">رؤية جديدة للإصلاح</h2>
+            </div>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+                <p class="lead-text" data-lang="about_desc">
+                    بلاك سميثز هي منصة رائدة تهدف إلى تحويل قطاع تقدير أضرار المركبات من خلال توظيف التكنولوجيا لضمان الدقة، السرعة، والشفافية لجميع الأطراف المعنية.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="vm-grid">
+                <div class="vm-card" data-aos="flip-left" data-aos-duration="1200">
+                    <div class="vm-icon"><i class="fas fa-eye"></i></div>
+                    <div class="vm-text">
+                        <h3 data-lang="vision_title">الرؤية</h3>
+                        <p data-lang="vision_desc">أن نكون المعيار الأول في دقة وموثوقية تقدير أضرار المركبات، وبناء منظومة رقمية متكاملة تخدم قطاع التأمين والورش والعملاء.</p>
+                    </div>
+                </div>
+                <div class="vm-card" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="vm-text">
+                        <h3 data-lang="mission_title">مهمتنا</h3>
+                        <p data-lang="mission_desc">تقديم منصة ذكية لتقدير أضرار المركبات، تعزز الدقة، تسرّع القرار، وتدعم الشفافية في منظومة الإصلاح.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-down">
+                <h2 class="section-title" data-lang="values_title">قيمنا</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="val-icon"><i class="fas fa-medal"></i></div>
+                    <h4 data-lang="val1_title">الجودة</h4>
+                    <p data-lang="val1_desc">الجودة هي أساس منصتنا، حيث نضمن تقديرًا دقيقًا، موثوقًا، ومتوافقًا مع أفضل الممارسات الفنية.</p>
+                </div>
+                <div class="value-card" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="val-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4 data-lang="val2_title">الاعتمادية</h4>
+                    <p data-lang="val2_desc">الاعتمادية هي جوهر منصتنا، حيث نضمن نتائج تقدير دقيقة، متسقة، وقابلة للاعتماد في اتخاذ القرار.</p>
+                </div>
+                <div class="value-card" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="val-icon"><i class="fas fa-handshake"></i></div>
+                    <h4 data-lang="val3_title">الشراكة</h4>
+                    <p data-lang="val3_desc">نبني شراكات استراتيجية قائمة على الثقة والتكامل، لتعزيز كفاءة وموثوقية تقدير أضرار المركبات.</p>
+                </div>
+                <div class="value-card" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="val-icon"><i class="fas fa-briefcase"></i></div>
+                    <h4 data-lang="val4_title">الخبرة السوقية</h4>
+                    <p data-lang="val4_desc">خبرة عميقة في قطاع المركبات تُمكّننا من تقديم حلول تقدير واقعية وموثوقة.</p>
+                </div>
+                <div class="value-card" data-aos="zoom-in-up" data-aos-delay="500">
+                    <div class="val-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h4 data-lang="val5_title">النزاهة</h4>
+                    <p data-lang="val5_desc">الالتزام بالحياد والشفافية لضمان عدالة التقدير وبناء الثقة المستدامة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title" data-lang="features_title">لماذا بلاك سميثز؟</h2>
+                <p class="section-desc" data-lang="features_desc">حلول متكاملة تضمن لك الأفضل.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box"><i class="fas fa-stopwatch"></i></div>
+                    <h4 data-lang="feat2_title">سرعة في الإنجاز</h4>
+                    <p data-lang="feat2_desc">نُسرّع دورة التقدير عبر حلول رقمية ذكية تقلّل الوقت والتكرار، مع الحفاظ على أعلى مستويات الجودة.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box"><i class="fas fa-file-contract"></i></div>
+                    <h4 data-lang="feat3_title">موثوقية ونتائج متسقة</h4>
+                    <p data-lang="feat3_desc">أنظمة مستقرة وبيانات قابلة للتحقق تضمن ثبات المخرجات وتقليل التباين بين التقديرات.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box"><i class="fas fa-search-dollar"></i></div>
+                    <h4 data-lang="feat4_title">شفافية ونزاهة</h4>
+                    <p data-lang="feat4_desc">تقدير محايد وواضح، بلا تضارب مصالح، يعزّز الثقة بين الورش وشركات التأمين والعملاء.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h4 data-lang="feat5_title">خبرة سوقية حقيقية</h4>
+                    <p data-lang="feat5_desc">حلول مبنية على فهم عميق لواقع إصلاح المركبات ومتطلبات السوق والأنظمة المحلية.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box"><i class="fas fa-desktop"></i></div>
+                    <h4 data-lang="feat6_title">تجربة استخدام احترافية</h4>
+                    <p data-lang="feat6_desc">واجهة واضحة وسهلة تقلّل الأخطاء وتُحسّن كفاءة العمل اليومي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-top" data-aos="fade-up" data-aos-duration="1200">
+                <div class="footer-brand">
+                    <img src="favicon.png" alt="Logo" class="footer-logo-img">
+                    <p data-lang="hero_slogan">التقدير كما يجب أن يكون</p>
+                    
+                    <div class="legal-info">
+                        <h4 data-lang="company_official_name">شركة بلاكسميثز التجارية</h4>
+                        <div class="legal-numbers">
+                            <span>
+                                <span data-lang="cr_label">سجل تجاري:</span> 
+                                <span class="num-font">4030597501</span>
+                            </span>
+                            <span class="separator">|</span>
+                            <span>
+                                <span data-lang="vat_label">الرقم الضريبي:</span> 
+                                <span class="num-font">3127046844</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span dir="ltr">055 338 8105</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@blacksmiths.site</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-lang="location">المملكة العربية السعودية</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BlackSmiths. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/966553388105" class="whatsapp-float" target="_blank" data-aos="zoom-in" data-aos-delay="1000">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button id="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        setTimeout(() => { const skip = document.getElementById('skip-wrapper'); if(skip) skip.classList.add('show'); }, 1500);
+        function dismissIntro() {
+            document.getElementById('intro-overlay').style.transform = 'translateY(-100%)';
+            document.body.classList.remove('stop-scrolling');
+            setTimeout(() => { AOS.init({ offset: 80, duration: 1000, easing: 'ease-out-cubic', once: false, mirror: true }); }, 500);
+        }
+        let scrollAttempt = false;
+        window.addEventListener('wheel', () => { if (!scrollAttempt) { dismissIntro(); scrollAttempt = true; } });
+        window.addEventListener('touchmove', () => { if (!scrollAttempt) { dismissIntro(); scrollAttempt = true; } });
+        window.addEventListener('load', () => { const p = document.getElementById('preloader'); if(p){p.style.opacity = '0'; setTimeout(() => { p.style.display = 'none'; }, 500);} });
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-toggle').querySelector('i');
+            if (html.getAttribute('data-theme') === 'light') { html.setAttribute('data-theme', 'dark'); icon.className = 'fas fa-sun'; } 
+            else { html.setAttribute('data-theme', 'light'); icon.className = 'fas fa-moon'; }
+        }
+
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { backToTopBtn.classList.add('show'); } 
+            else { backToTopBtn.classList.remove('show'); }
+        };
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        const translations = {
+            ar: {
+                contact_btn: "تواصل معنا",
+                hero_label: "منصة ذكية متكاملة",
+                hero_title: 'التقدير كما يجب <br><span class="text-orange">أن يكون</span>',
+                hero_slogan: "التقدير كما يجب أن يكون",
+                hero_desc: "نقدم حلولاً رقمية ذكية لتقدير أضرار المركبات بدقة وموثوقية عالية.",
+                discover_btn: "اكتشف المزيد",
+                about_subtitle: "عن المنصة",
+                about_title: "رؤية جديدة للإصلاح",
+                about_desc: "بلاك سميثز هي منصة رائدة تهدف إلى تحويل قطاع تقدير أضرار المركبات من خلال توظيف التكنولوجيا لضمان الدقة، السرعة، والشفافية لجميع الأطراف المعنية.",
+                vision_title: "الرؤية",
+                vision_desc: "أن نكون المعيار الأول في دقة وموثوقية تقدير أضرار المركبات، وبناء منظومة رقمية متكاملة تخدم قطاع التأمين والورش والعملاء.",
+                mission_title: "مهمتنا",
+                mission_desc: "تقديم منصة ذكية لتقدير أضرار المركبات، تعزز الدقة، تسرّع القرار، وتدعم الشفافية في منظومة الإصلاح.",
+                values_title: "قيمنا",
+                val1_title: "الجودة",
+                val1_desc: "الجودة هي أساس منصتنا، حيث نضمن تقديرًا دقيقًا، موثوقًا، ومتوافقًا مع أفضل الممارسات الفنية.",
+                val2_title: "الاعتمادية",
+                val2_desc: "الاعتمادية هي جوهر منصتنا، حيث نضمن نتائج تقدير دقيقة، متسقة، وقابلة للاعتماد في اتخاذ القرار.",
+                val3_title: "الشراكة",
+                val3_desc: "نبني شراكات استراتيجية قائمة على الثقة والتكامل، لتعزيز كفاءة وموثوقية تقدير أضرار المركبات.",
+                val4_title: "الخبرة السوقية",
+                val4_desc: "خبرة عميقة في قطاع المركبات تُمكّننا من تقديم حلول تقدير واقعية وموثوقة.",
+                val5_title: "النزاهة",
+                val5_desc: "الالتزام بالحياد والشفافية لضمان عدالة التقدير وبناء الثقة المستدامة.",
+                features_title: 'لماذا بلاك سميثز؟',
+                features_desc: "حلول متكاملة تضمن لك الأفضل.",
+                feat2_title: "سرعة في الإنجاز",
+                feat2_desc: "نُسرّع دورة التقدير عبر حلول رقمية ذكية تقلّل الوقت والتكرار، مع الحفاظ على أعلى مستويات الجودة.",
+                feat3_title: "موثوقية ونتائج متسقة",
+                feat3_desc: "أنظمة مستقرة وبيانات قابلة للتحقق تضمن ثبات المخرجات وتقليل التباين بين التقديرات.",
+                feat4_title: "شفافية ونزاهة",
+                feat4_desc: "تقدير محايد وواضح، بلا تضارب مصالح، يعزّز الثقة بين الورش وشركات التأمين والعملاء.",
+                feat5_title: "خبرة سوقية حقيقية",
+                feat5_desc: "حلول مبنية على فهم عميق لواقع إصلاح المركبات ومتطلبات السوق والأنظمة المحلية.",
+                feat6_title: "تجربة استخدام احترافية",
+                feat6_desc: "واجهة واضحة وسهلة تقلّل الأخطاء وتُحسّن كفاءة العمل اليومي.",
+                location: "المملكة العربية السعودية",
+                company_official_name: "شركة بلاكسميثز التجارية",
+                cr_label: "سجل تجاري:",
+                vat_label: "الرقم الضريبي:"
+            },
+            en: {
+                contact_btn: "Contact Us",
+                hero_label: "Integrated Smart Platform",
+                hero_title: 'Estimation, <br><span class="text-orange">Done Right</span>',
+                hero_slogan: "Estimation, Done Right",
+                hero_desc: "We provide smart digital solutions for vehicle damage estimation with high accuracy and reliability.",
+                discover_btn: "Discover More",
+                about_subtitle: "About Platform",
+                about_title: "A New Vision for Repair",
+                about_desc: "BlackSmiths is a leading platform aimed at transforming the vehicle damage estimation sector by leveraging technology to ensure accuracy, speed, and transparency for all stakeholders.",
+                vision_title: "Vision",
+                vision_desc: "To be the primary standard for accuracy and reliability in vehicle damage estimation, building an integrated digital ecosystem serving the insurance sector, workshops, and customers.",
+                mission_title: "Mission",
+                mission_desc: "Providing a smart platform for vehicle damage estimation that enhances accuracy, accelerates decision-making, and supports transparency in the repair ecosystem.",
+                values_title: "Our Values",
+                val1_title: "Quality",
+                val1_desc: "Quality is the foundation of our platform, ensuring accurate, reliable estimation consistent with best technical practices.",
+                val2_title: "Reliability",
+                val2_desc: "Reliability is the core of our platform, ensuring accurate, consistent, and dependable estimation results for decision-making.",
+                val3_title: "Partnership",
+                val3_desc: "We build strategic partnerships based on trust and integration to enhance the efficiency and reliability of vehicle damage estimation.",
+                val4_title: "Market Expertise",
+                val4_desc: "Deep expertise in the automotive sector enables us to provide realistic and reliable estimation solutions.",
+                val5_title: "Integrity",
+                val5_desc: "Commitment to neutrality and transparency to ensure fair estimation and build sustainable trust.",
+                features_title: 'Why BlackSmiths?',
+                features_desc: "Integrated solutions ensuring the best for you.",
+                feat2_title: "Speed without Compromise",
+                feat2_desc: "We accelerate the estimation cycle through smart digital solutions that reduce time and redundancy while maintaining quality.",
+                feat3_title: "Reliability & Consistency",
+                feat3_desc: "Stable systems and verifiable data ensure output consistency and reduce variance between estimates.",
+                feat4_title: "Transparency & Integrity",
+                feat4_desc: "Neutral and clear estimation with no conflict of interest enhances trust between workshops, insurance companies, and customers.",
+                feat5_title: "Real Market Expertise",
+                feat5_desc: "Solutions built on a deep understanding of vehicle repair reality, market requirements, and local regulations.",
+                feat6_title: "Professional UX",
+                feat6_desc: "A clear and easy interface that reduces errors and improves daily work efficiency.",
+                location: "Kingdom of Saudi Arabia",
+                company_official_name: "BlackSmiths Trading Company",
+                cr_label: "C.R:",
+                vat_label: "VAT:"
+            }
+        };
+
+        function toggleLanguage() {
+            const htmlTag = document.documentElement;
+            const langBtn = document.getElementById('lang-btn');
+            const currentLang = htmlTag.getAttribute('lang');
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            htmlTag.setAttribute('lang', newLang);
+            htmlTag.setAttribute('dir', newLang === 'ar' ? 'rtl' : 'ltr');
+            langBtn.textContent = newLang === 'ar' ? 'English' : 'عربي';
+            if (newLang === 'en') { document.body.style.fontFamily = "'Inter', sans-serif"; } 
+            else { document.body.style.fontFamily = "'Cairo', sans-serif"; }
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (translations[newLang][key]) { element.innerHTML = translations[newLang][key]; }
+            });
+        }
+    </script>
+</body>
+</html>
